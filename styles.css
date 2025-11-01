@@ -123,5 +123,51 @@ nav a:hover{
   color: #003366;
 }
 
+.achievements {
+  padding: 4rem 2rem;
+  text-align: center;
+}
 
+.achievements h4 {
+  font-size: 1.8rem;
+  color: #222;
+  margin-bottom: 1.5rem;
+}
 
+.lista-logros {
+  list-style: none;             
+  padding: 0;
+  max-width: 600px;
+  margin: 0 auto;
+
+}
+
+.footer {
+  background-color: #003366;
+  color: white;
+  padding: 1.5rem 0;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.footer-content p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.redes {
+  margin-top: 0.8rem;
+}
+
+.redes a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.redes a:hover {
+  color: #ffcc00;
+  text-decoration: underline;
+}
