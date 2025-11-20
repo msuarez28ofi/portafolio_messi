@@ -171,3 +171,11 @@ nav a:hover{
   color: #ffcc00;
   text-decoration: underline;
 }
+
+
+*{
+  font-family: "Unbounded", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}

@@ -121,6 +121,11 @@
 
   <section id="comentarios" class="mt-5 bg-secondary text-white p-5 ">
     <div class="container-fluid">
+
+      <?php
+      include "controller/create_comment_controller.php"; 
+      ?>
+
       <form class="col-lg-4" method="POST">
         <h3 class="text-center">Comentarios</h3>
         <div class="mt-4" >
@@ -141,6 +146,53 @@
         <button type="submit" class="btn btn-light mt-4" name="btn_enviar" value="ok" >Enviar</button>
 
       </form>
+      <?php
+        include "model/conn.php";
+        $query = $conn->query("select * from comentarios");
+
+      ?>
+
+       <div class="mt-5">
+
+        <h3 class="text-center mb-4">Comentarios Recientes</h3>
+
+        <?php
+
+        if ($query->num_rows == 0) {
+            echo "<p class='text-center text-light'>No hay comentarios aún. ¡Sé el primero en comentar! 😊</p>";
+        }
+
+        while ($row = $query->fetch_assoc()) :
+        ?>
+
+        <div class="card bg-dark text-white mb-3 shadow">
+            <div class="card-body">
+                <h5 class="card-title">
+                    <?php echo htmlspecialchars($row['usuario']); ?>
+                </h5>
+
+                <h6 class="card-subtitle text-secondary">
+                    <?php echo htmlspecialchars($row['email']); ?>
+                </h6>
+
+                <p class="card-text mt-3">
+                    <?php echo nl2br(htmlspecialchars($row['nota'])); ?>
+                </p>
+
+                <p class="text-end text-muted" style="font-size: 0.9rem;">
+                     <?php echo $row['fecha']; ?>
+                </p>
+
+                <div class="d-flex justify-content-end">
+                    <a href="editar.php?id=<?php echo $row['id']; ?>" class="btn btn-sm btn-warning me-2">Editar</a>
+                    <a href="eliminar.php?id=<?php echo $row['id']; ?>" class="btn btn-sm btn-danger">Eliminar</a>
+                </div>
+            </div>
+        </div>
+
+        <?php endwhile; ?>
+
+      </div>
     </div>
 
   </section>
