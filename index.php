@@ -1,3 +1,6 @@
+<?php
+include "controller/create_comment_controller.php";
+?>
 <!DOCTYPE html>
 <html lang="VE-es">
 <head>
