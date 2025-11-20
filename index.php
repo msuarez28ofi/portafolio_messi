@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
     <title>portafolio</title>
 </head>
 <body>
@@ -18,7 +20,7 @@
             <a href="#Biografia">Biografia</a>
             <a href="#Estadisticas">Estadisticas</a>
             <a href="#logros">Logros y Títulos</a>
-            <!-- <a href="#"></a> -->
+            <a href="#comentarios">Comentarios</a>
         </nav>
 
 
@@ -116,6 +118,32 @@
       <!--profe no me dio chance para el video y ponerlo mas bonito pero ahi quedo, casi perfecto☹-->
     </section>
 
+
+  <section id="comentarios" class="mt-5 bg-secondary text-white p-5 ">
+    <div class="container-fluid">
+      <form class="col-lg-4" method="POST">
+        <h3 class="text-center">Comentarios</h3>
+        <div class="mt-4" >
+          <label for="form_usuario" class="from-label">Usuario</label>
+          <input type="text" class="form-control bg-secondary text-white" name="usuario">
+
+        </div>
+        <div class="mt-4">
+          <label for="form_email" class="from-label">Email</label>
+          <input type="text" class="form-control bg-secondary text-white"   name="email">
+
+        </div>
+        <div class="mt-4">
+          <label for="form_comentario" class="from-label">Comentario</label>
+          <textarea class="form-control bg-secondary text-white"  name="comentario"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-light mt-4" name="btn_enviar" value="ok" >Enviar</button>
+
+      </form>
+    </div>
+
+  </section>
 
   <footer class="footer">
     <div class="footer-content">
