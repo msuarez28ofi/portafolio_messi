@@ -129,7 +129,7 @@ include "controller/create_comment_controller.php";
       include "controller/create_comment_controller.php"; 
       ?>
 
-      <form class="col-lg-4" method="POST">
+      <form class="col-lg-4 m-auto" method="POST">
         <h3 class="text-center">Comentarios</h3>
         <div class="mt-4" >
           <label for="form_usuario" class="from-label">Usuario</label>
@@ -145,9 +145,10 @@ include "controller/create_comment_controller.php";
           <label for="form_comentario" class="from-label">Comentario</label>
           <textarea class="form-control bg-secondary text-white"  name="comentario"></textarea>
         </div>
-
-        <button type="submit" class="btn btn-light mt-4" name="btn_enviar" value="ok" >Enviar</button>
-
+        <div class="text-center">
+          <button type="submit" class="btn btn-light mt-4 col-5 " name="btn_enviar" value="ok" >Enviar</button>
+        </div>
+        
       </form>
       <?php
         include "model/conn.php";
@@ -187,7 +188,7 @@ include "controller/create_comment_controller.php";
                 </p>
 
                 <div class="d-flex justify-content-end">
-                    <a href="editar.php?id=<?php echo $row['id']; ?>" class="btn btn-sm btn-warning me-2">Editar</a>
+                    <a href="controller/edit_comment_controller.php?id=<?php echo $row['id']; ?>" class="btn btn-sm btn-warning">Editar</a>
                     <a href="eliminar.php?id=<?php echo $row['id']; ?>" class="btn btn-sm btn-danger">Eliminar</a>
                 </div>
             </div>
