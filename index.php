@@ -189,7 +189,7 @@ include "controller/create_comment_controller.php";
 
                 <div class="d-flex justify-content-end">
                     <a href="edit_index.php?id=<?= $row['id'] ?>" class="btn btn-primary">Editar</a>
-                    <a href="eliminar.php?id=<?php echo $row['id']; ?>" class="btn btn-sm btn-danger">Eliminar</a>
+                    <a href="controller/delete_comment_controller.php?id=<?= $row['id'] ?>" class="btn btn-sm btn-danger ms-2">Eliminar</a>
                 </div>
             </div>
         </div>
