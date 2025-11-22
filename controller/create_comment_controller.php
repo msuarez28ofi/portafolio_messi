@@ -1,6 +1,6 @@
 <?php
 
-include "model/conn.php";  // ← ESTA ES LA RUTA CORRECTA
+include "model/conn.php";  
 
 if (!empty($_POST["btn_enviar"])) {
 
